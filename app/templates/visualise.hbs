@@ -1,0 +1,19 @@
+{{page-title 'Visualise'}}
+
+<div>
+  <Textarea
+    rows='15'
+    cols='100'
+    placeholder='Turtle Input'
+    @value={{this.value}}
+    {{on 'input' this.updateValue}}
+  />
+</div>
+<div>
+  <button type='button' {{on 'click' this.getImage}}>Visualise Turtle Input</button>
+</div>
+
+<h3>Visualisation:</h3>
+<div>
+  <img src={{this.imageUrl}} alt='No graph render yet' />
+</div>

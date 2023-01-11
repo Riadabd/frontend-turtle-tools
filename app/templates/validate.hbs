@@ -1,0 +1,45 @@
+{{page-title 'Validate'}}
+
+<p><Textarea
+    style='overflow:hidden'
+    wrap='off'
+    rows='15'
+    cols='1'
+    @value={{this.line_number_value}}
+    {{scroll-when this.scroll_top}}
+    {{resize-when this.editor_height}}
+    readonly
+  />
+  <Textarea
+    id='textEditor'
+    rows='15'
+    cols='100'
+    placeholder='Turtle Input'
+    @value={{this.text_editor_value}}
+    {{on 'input' this.updateLineCounter}}
+    {{on 'scroll' this.updateOnScrolling}}
+    {{observe-resize this.adjustForResize}}
+  />
+</p>
+
+<div><button type="button" {{on 'click' this.getSyntaxErrors}}>Validate Turtle Input</button></div>
+
+{{#if this.errors.length}}
+    <div>
+        <table>
+            <tr>
+                <th>Errors</th>
+            </tr>
+            {{#each this.errors as |error|}}
+            <tr>
+                <td {{on 'click' this.selectText}}>{{error}}</td>
+            </tr>
+        </table>
+    </div>
+{{else if this.showEmptySpace}}
+    <div></div>
+{{else}}
+    <div>
+        <p>This syntax is correct!</p>
+    </div>
+{{/if}}
