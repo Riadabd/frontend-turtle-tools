@@ -1,7 +1,11 @@
-{{page-title "FrontendTurtleTools"}}
+{{page-title 'FrontendTurtleTools'}}
 
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
+<h1>Welcome to Turtle Tools</h1>
+
+<nav>
+  <LinkTo @route='validate'>Validate</LinkTo>
+  |
+  <LinkTo @route='visualise'>Visualise</LinkTo>
+</nav>
 
 {{outlet}}

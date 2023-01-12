@@ -1,0 +1,36 @@
+body {
+  background: no-repeat
+    url(http://s.ytimg.com/yt/imgbin/www-refreshbg-vflC3wnbM.png) 0 0;
+  background-color: #ebebeb;
+  background-repeat: repeat;
+}
+
+table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+td,
+th {
+  border: 1px solid black;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+img {
+  width: auto;
+  margin: auto;
+}
+
+textarea {
+  margin-top: 15px;
+}
+
+button {
+  margin-top: 5px;
+}
