@@ -37,7 +37,7 @@ export default class StoreService extends Service {
   }
 
   async fetchGraphRender(turtle_input) {
-    let response = await fetch('/visualise', {
+    let response = await fetch('/graph', {
       method: 'POST',
       headers: {
         Accept: 'image/png',
