@@ -40,7 +40,7 @@ export default class StoreService extends Service {
     let response = await fetch('/graph', {
       method: 'POST',
       headers: {
-        Accept: 'image/png',
+        Accept: 'image/svg',
       },
       body: turtle_input,
     });
